@@ -43,3 +43,23 @@ Step by step:
 
 5\. Filtered with WHERE rnk <= 3 to keep only the top 3 unique salary levels per department.
 
+
+DSA:
+1. seen holds the characters currently inside our window (no duplicates allowed).
+
+2\. j moves forward one character at a time across the string.
+
+3\. Before adding s\[j], check if it is already in seen.
+
+4\. If it is a duplicate, shrink the window from the left (move i forward, 
+
+&#x20;  removing characters) until the duplicate is gone.
+
+5\. Add s\[j] to seen once it's safe.
+
+6\. Calculate window size as j - i + 1, and update n if this is the biggest 
+
+&#x20;  window seen so far.
+
+7\. Return n at the end.
+
